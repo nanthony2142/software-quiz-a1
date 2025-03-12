@@ -4,7 +4,7 @@ import os
 from earth import questions
 
 
-def print_questions(earth):
+def earth_questions(earth):
     # clear the screen
     from earth import questions
     for question in earth:
@@ -12,7 +12,7 @@ def print_questions(earth):
 
 def intro():
     print("Hello!")
-    print_questions(questions)
+    earth_questions(questions)
 
 def main():
     intro()
