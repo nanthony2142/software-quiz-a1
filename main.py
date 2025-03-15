@@ -15,6 +15,12 @@ question_amount = 0
 number = 0
 wrong_answers = []
 
+#########
+##### TOO DO LIST
+# TYPEWRITTER
+# ADD MORE QUESTIONS
+# TEST
+########
 
 def typewriter(words): # allows type writting effect
     for char in words:
