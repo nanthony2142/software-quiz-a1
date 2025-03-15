@@ -18,12 +18,24 @@ questions = [
     {"Topic": "earth", "Question":"Which piece of evidence is NOT used to help identify Earth's layers?","Options":["a) Seismic Waves\n","b) Meteorites\n","c) Volcanos\n","d) Mining\n"],"Answer": "d","Explanation": "Mining is not used to help identify Earth's layers."},
     {"Topic": "earth", "Question":"Which of these is NOT part of the rock cycle?","Options":["a) Magma cools and hardens to form igneous rock.\n","b) Sediments are compressed and bonded together to form sedimentary rock.\n","c) Existing rocks undergo heat and pressure, transforming into metamorphic rock.\n","d) Water evaporates from minerals, causing them to fuse into solid rock over time.\n"],"Answer": "d","Explanation": "Water evaporating from minerals is not part of the rock cycle."},
     {"Topic": "earth", "Question":"In 1912, Alfred Wegener proposed that the continents were once part of a single massive landmass called Pangaea. \nHowever, his theory wasn't widely accepted until the early 1960s. \nWhich of these is NOT a piece of evidence that supports Wegeners claim?","Options":["a) Glacial deposits in regions now near the equator \nindicated that continents were once \npositioned closer to the poles.\n","b) Radiometric dating suggested that rocks were \nformed at similar times on mutiple continents.\n","c) The coastlines of continents like South America and Africa \nseem to fit together like a jigsaw puzzle, \nsuggesting they were once connected.\n","d) Similar fossils found on continents now separated by oceans \nsuggest they were once connected.\n"],"Answer": "b","Explanation": "Radiometric dating was not used as evidence to support Wegeners claim."},
+    
+    {"Topic": "chemistry", "Question":"What is the most reactive element on the periodic table?","Options":["a) Francium\n","b) Fluorine\n","c) Oxygen\n","d) Hydrogen\n"],"Answer": "a","Explanation": "Francium a Alkaline Earth Metal that is the most reactive element in the universe."},
+    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the universe?","Options":["a) Hydrogen\n","b) Helium\n","c) Oxygen\n","d) Carbon\n"],"Answer": "a","Explanation": "Hydrogen is the most abundant element in the universe."},
+    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the Earth's crust?","Options":["a) Oxygen\n","b) Silicon\n","c) Aluminum\n","d) Iron\n"],"Answer": "a","Explanation": "Oxygen is the most abundant element in the Earth's crust."},
+    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the human body?","Options":["a) Oxygen\n","b) Carbon\n","c) Hydrogen\n","d) Nitrogen\n"],"Answer": "a","Explanation": "Oxygen is the most abundant element in the human body."},
+    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the Earth's atmosphere?","Options":["a) Nitrogen\n","b) Oxygen\n","c) Carbon Dioxide\n","d) Argon\n"],"Answer": "a","Explanation": "Nitrogen is the most abundant element in the Earth's atmosphere."},
+    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the Earth's oceans?","Options":["a) Hydrogen\n","b) Oxygen\n","c) Sodium\n","d) Chlorine\n"],"Answer": "b","Explanation": "Oxygen is the most abundant element in the Earth's oceans."},
+
+    {"Topic": "biology", "Question": "Which of the following is NOT alive?", "Options": ["a) animals\n", "b) fungi\n", "c) virus\n", "d) bacteria\n"], "Answer": "c", "Explanation": "Viruses are not considered alive because they cannot reproduce on their own."},
+
 ]
 
 
 
 # os.system('cls' if os.name == 'nt' else 'clear')
-# for question in questions:
+
+# chemistry_questions = [question for question in questions if question["Topic"].lower() == "chemistry"]
+# for question in chemistry_questions:
 #     random.shuffle(questions)
 #     print(question["Question"])
 #     print(f"Your options are:")
@@ -39,3 +51,4 @@ questions = [
 #         print("Wrong")
 #         time.sleep(1)
 #         os.system('cls' if os.name == 'nt' else 'clear')
+
