@@ -95,7 +95,7 @@ def earth_questions(questions):
 
     percentage = score / question_amount * 100
 
-    print("You got {:.2f}%".format(percentage))
+    print("You got {:.2f}% on this test.".format(percentage))
     print("Your rank is...")
     time.sleep(3)
     if percentage <= 20:
@@ -124,7 +124,7 @@ def earth_questions(questions):
     elif percentage <= 80:
         print("Quartz!")
         time.sleep(1.5)
-        print("Now we’re talking! You’re tough, durable, and versatile. You make up sand, glass, and even tech components.")
+        print("You’re tough, durable, and versatile. You make up sand, glass, and even tech components.")
         print("You might not be the hardest, but people rely on you for watches, buildings, and even some beautiful gemstones.")
         print("You’ve earned your place.")
 
@@ -255,7 +255,7 @@ def chemistry_questions(questions):
 
     percentage = score / question_amount * 100
 
-    print("You got {:.2f}%".format(percentage))
+    print("You got {:.2f}% on this test.".format(percentage))
     print("Your rank is...")
     time.sleep(3)
     if percentage <= 20:
@@ -419,48 +419,46 @@ def biology_questions(questions):
 
     percentage = score / question_amount * 100
 
-    print("You got {:.2f}%".format(percentage))
+    print("You got {:.2f}% on this test.".format(percentage))
     print("Your rank is...")
     time.sleep(3)
     if percentage <= 20:
-        print("Talc!")
+        print("Mycoplasma!")
         time.sleep(1.5)
-        print("You crumble under the slightest pressure. A mere touch can wear you down, ")
-        print("and even a fingernail is too much for you. You’re soft, flaky, and honestly,")
-        print("no one’s picking you first for the team. But hey, at least you're useful in baby powder. ")
+        print("You’re microscopic, fragile, and barely holding it together.")
+        print("With no cell wall, even antibiotics push you around.")
+        print("You survive by leeching off stronger organisms, parasitic and pathetic.")
         
     elif percentage <= 40:
-        print("Gypsum!")
+        print("Amoeba!")
         time.sleep(1.5)
-        print("You try, but you're still easily scratched, a simple copper coin can still leave a mark on you.")
-        print("At least you're useful in drywall and plaster, holding houses together.")
-        print("Just don’t expect to be the foundation.")
+        print("You’ve got no backbone, no real structure, and you move by oozing around.")
+        print("But don’t underestimate yourself your adaptability lets you survive in places others can’t.")
         
 
     elif percentage <= 60:
-        print("Apatite!")
+        print("Mushroom!")
         time.sleep(1.5)
-        print("You’re no pushover, but you’re not indestructible either. Harder than your weaker cousins, ")
-        print("you’re tough enough to resist everyday wear but still won’t last against the real heavyweights.") 
-        print("You help build bones and teeth, so at least you're part of the reason people can actually chew their food.")
+        print("You work in the shadows, breaking down the dead and recycling life itself.")
+        print("Your roots spread like an underground network, influencing entire ecosystems.")
+        print("People might not always notice you, but without you, nature falls apart.")
 
 
     elif percentage <= 80:
-        print("Quartz!")
+        print("Redwood Tree!")
         time.sleep(1.5)
-        print("Now we’re talking! You’re tough, durable, and versatile. You make up sand, glass, and even tech components.")
-        print("You might not be the hardest, but people rely on you for watches, buildings, and even some beautiful gemstones.")
-        print("You’ve earned your place.")
-
+        print("You don’t need to move when you’re this big.")
+        print("Towering over the competition, you’ve stood strong for centuries, unshaken by storms, fires, or time.")
+        print("You breathe life into the world, and even when you fall, you shape ecosystems for generations.")
 
     else:
-        print("Diamond!")
+        print("Orca!")
         time.sleep(1.5)
-        print("You’ve been under immense pressure, and instead of breaking, ")
-        print("you became the toughest mineral on Earth.")
-        print("No one scratches you, and you shine bright, whether in industry or in luxury. ")
-        print("You’re the ultimate performer, proving that pressure makes diamonds!")
-
+        print("You dominate the ocean with intelligence, teamwork, and raw power.")
+        print("No natural predators, no real threats you decide who lives and who dies.")
+        print("Whether hunting in packs or outsmarting your prey, you rule your domain like no other.")
+        print("You are the king of the sea.")
+    
     ###
 
     if wrong_answers:
@@ -553,7 +551,8 @@ def main():
     intro()
 
 def ending():
-    pass
+    os.system('cls' if os.name == 'nt' else 'clear')
+    typewriter("Thank you for doing my quizzes. I hope you now have an idea of which science interests you.")
 
 os.system('cls' if os.name == 'nt' else 'clear')
 main()

@@ -2,6 +2,20 @@ import time
 import os
 import random
 
+
+
+#############INTROOOOOOOO########
+#please open the terminal as much as you can etccccccc
+
+
+
+Hello 
+
+#############INTROOOOOOOO########
+
+
+
+
 questions = [
     {"Topic": "earth", "Question":"How was the moon created?","Options":["a) Accretion from elements of a once Nebula star\n formed into a moon like structure.\n","b) Dairy factories created a huge sphere of cheese\n and sent it to space.\n","c) A planet the size of Mars hit Earth\n forming a moon structure from Earths rubble.\n","d) A comet from a nearby galaxy got caught\n in Earth's gravitational pull and became the moon.\n"],"Answer": "c","Explanation": "The moon was actually created when a planet the size of Mars hit Earth, forming a moon structure from Earths rubble."},
     {"Topic": "earth", "Question":"Which of these materials is soil NOT made of?","Options":["a) Clay\n","b) Charcoa\n", "c) Silt\n", "d) Sand\n"],"Answer": "b","Explanation": "Soil is not made of charcoal."},
@@ -11,7 +25,7 @@ questions = [
     {"Topic": "earth", "Question":"What is the first horizon of soil called?","Options":["a) O-horizion\n","b) A-horizon\n","c) B-horizon\n","d) P-horizon\n"],"Answer": "a","Explanation": "The O-horizon is the first horizon of soil and is made up of ORGANIC matter, which is why it's called the O-horizon."},
     {"Topic": "earth", "Question":"Which of these animal's was the first to exist?","Options":["a) Bee\n","b) Tyrannosaurus rex\n","c) Arthropleura\n","d) Megalodon\n"],"Answer": "c","Explanation": "Arthropleura was the first animal of these to exist and was a giant millipede."},
     {"Topic": "earth", "Question":"Which great extinction event wiped out the most life on Earth?","Options":["a) Permian–Triassic extinction event \n(Massive volcanic eruptions in Siberia caused climate changes and loss of oxygen.)\n","b) Cretaceous–Paleogene extinction \n(Wiped out the dinosaurs and allowed mamals to dominate.)\n","c) Late Devonian extinction \n(Caused by climate changes \nwiping out many reef-building organisms.)\n","d) Triassic–Jurassic extinction \n(Volcanic activity paved the way for dinosaurs to dominate.)\n"],"Answer": "a","Explanation": "The Permian–Triassic extinction event wiped out 96% of all marine species and 70% of all land species. it is known as the Great Dying."},
-    {"Topic": "earth", "Question":"Which layer of Earth is made of liquid?","Options":["a) the Crust\n","b) the Mantle\n","c) the Outer Core\n","d) the Inner Core\n"],"Answer": "c","Explanation": "The Outer Core is made of liquid iron and nickel. This was discovered by studying seismic waves as secondary waves can't travel through liquids."},
+    {"Topic": "earth", "Question":"Which layer of Earth is made of liquid?","Options":["a) The Crust\n","b) The Mantle\n","c) The Outer Core\n","d) The Inner Core\n"],"Answer": "c","Explanation": "The Outer Core is made of liquid iron and nickel. This was discovered by studying seismic waves as secondary waves can't travel through liquids."},
     {"Topic": "earth", "Question":"How are we able to date how old rocks are?","Options":["a) Fossil Frequency Analysis \n(The number of fossils in a rock layer is counted, \nand more fossils mean an older rock.)\n","b) Radiometric Dating \n(Scientists measure the decay of radioactive isotopes, \nsuch as uranium turning into lead, to determine a rock’s age.)\n","c) Crystal Vibration Timing \n(By measuring how fast the tiny crystals inside the rock vibrate, scientists can calculate its age.)\n","d) Rock Hardness Progression \n(Rocks get harder over time, so geologists test how difficult they are to scratch to determine their age.)\n"],"Answer": "b","Explanation": "Radiometric Daiting is the process of measuring the decay of radioactive isotopes. From this we have been able to determine the age of the Earth to be 4.54 billion years old."},
     {"Topic": "earth", "Question":"What are the main two elements that are used in Radiometric Dating?","Options":["a) Iron and Hydrogen\n","b) Iron and Carbon\n","c) Lead and Uranium\n","d) Uranium and Carbon\n"],"Answer": "d","Explanation": "Uranium and Carbon are the two main elements used in Radiometric Dating. Uranium is used to date rocks and Carbon is used to date organic material."},
     {"Topic": "earth", "Question":"What is NOT a real rock type?","Options":["a) Metamorphic\n","b) Cryllic\n","c) Igneous\n","d) Sedimentary\n"],"Answer": "b","Explanation": "Cryllic is not a real rock type."},
@@ -20,15 +34,24 @@ questions = [
     {"Topic": "earth", "Question":"In 1912, Alfred Wegener proposed that the continents were once part of a single massive landmass called Pangaea. \nHowever, his theory wasn't widely accepted until the early 1960s. \nWhich of these is NOT a piece of evidence that supports Wegeners claim?","Options":["a) Glacial deposits in regions now near the equator \nindicated that continents were once \npositioned closer to the poles.\n","b) Radiometric dating suggested that rocks were \nformed at similar times on mutiple continents.\n","c) The coastlines of continents like South America and Africa \nseem to fit together like a jigsaw puzzle, \nsuggesting they were once connected.\n","d) Similar fossils found on continents now separated by oceans \nsuggest they were once connected.\n"],"Answer": "b","Explanation": "Radiometric dating was not used as evidence to support Wegeners claim."},
     
     {"Topic": "chemistry", "Question":"What is the most reactive element on the periodic table?","Options":["a) Francium\n","b) Fluorine\n","c) Oxygen\n","d) Hydrogen\n"],"Answer": "a","Explanation": "Francium a Alkaline Earth Metal that is the most reactive element in the universe."},
-    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the universe?","Options":["a) Hydrogen\n","b) Helium\n","c) Oxygen\n","d) Carbon\n"],"Answer": "a","Explanation": "Hydrogen is the most abundant element in the universe."},
-    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the Earth's crust?","Options":["a) Oxygen\n","b) Silicon\n","c) Aluminum\n","d) Iron\n"],"Answer": "a","Explanation": "Oxygen is the most abundant element in the Earth's crust."},
-    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the human body?","Options":["a) Oxygen\n","b) Carbon\n","c) Hydrogen\n","d) Nitrogen\n"],"Answer": "a","Explanation": "Oxygen is the most abundant element in the human body."},
-    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the Earth's atmosphere?","Options":["a) Nitrogen\n","b) Oxygen\n","c) Carbon Dioxide\n","d) Argon\n"],"Answer": "a","Explanation": "Nitrogen is the most abundant element in the Earth's atmosphere."},
-    {"Topic": "chemistry", "Question":"AWhat is the most abundant element in the Earth's oceans?","Options":["a) Hydrogen\n","b) Oxygen\n","c) Sodium\n","d) Chlorine\n"],"Answer": "b","Explanation": "Oxygen is the most abundant element in the Earth's oceans."},
-
+    
     {"Topic": "biology", "Question": "Which of the following is NOT alive?", "Options": ["a) animals\n", "b) fungi\n", "c) virus\n", "d) bacteria\n"], "Answer": "c", "Explanation": "Viruses are not considered alive because they cannot reproduce on their own."},
-
+    {"Topic": "biology", "Question": "Which of these is NOT a real animal species?", "Options": ["a) Naked Mole Rat\n", "b) Panther\n", "c) Tartigrade\n", "d) Headless Chicken Monster\n"], "Answer": "b", "Explanation": "Panther's are not a real animal species. However Panthera is a genus which includes big cats such as lions and tigers."},
+    {"Topic": "biology", "Question": "which of these is NOT a membrane bound organelle?", "Options": ["a) Ribosome (A small structure that synthesizes proteins)\n", "b) Mitochondria (Responsible for cellular respiration)\n", "c) Vacuole (A sac that stores nutrients)\n", "d) Nucleus (Stores DNA of the cell)\n"], "Answer": "a", "Explanation": "Ribosomes are not membrane bound organelles."},
+    {"Topic": "biology", "Question": "Which of the following is NOT a requirement of MRS GREN, the acronym that represents the characteristics all living things must have?", "Options": ["a) Movement\n", "b) Respiration\n", "c) Growth\n", "d) Equilibrium\n"], "Answer": "d", "Explanation": "Equilibrium is not a requirement of MRS GREN."},
+    {"Topic": "biology", "Question": "What is the name of the diagram that illustrates the evolutionary connections between all living organisms?", "Options": ["a) The Evolutionary Ladder\n", "b) The Tree of Life\n", "c) The Organism Web\n", "d) The Food Web\n"], "Answer": "b", "Explanation": "The Tree of Life is the diagram that illustrates the evolutionary connections between all living organisms."},
+    {"Topic": "biology", "Question": "What is the largest living organism on Earth?", "Options": ["a) Blue Whale\n", "b) Honey Mushroom\n", "c) The Great Barrier Reef\n", "d) African Elephant\n"], "Answer": "b", "Explanation": "The Honey Mushroom is the largest living organism on Earth as it's roots reach out 10.36 square kilometers. The Great Barrier Reef is bigger but is made up of many individual organisms."},
+    {"Topic": "biology", "Question": "What is the process by which an organism maintains a stable internal environment?", "Options": ["a) Metabolism\n", "b) Respiration\n", "c) Homeostasis\n", "d) Reproduction\n"], "Answer": "c", "Explanation": "Homeostasis is the process by which an organism maintains a stable internal environment, such as someones body temperature."},
+    {"Topic": "biology", "Question": "Which kingdom is most closely related to humans, besides Animalia?", "Options": ["a) Plantae\n", "b) Protista\n", "c) Bacteria\n", "d) Fungi\n"], "Answer": "d", "Explanation": "Fungi is the kingdom most closely related to humans, besides Animalia. Because we share a common ancestor."},
+    {"Topic": "biology", "Question": "What does DNA stand for?", "Options": ["a) Deoxyribonucleic Acid\n", "b) Dynamic Nucleic Acid\n", "c) Deoxynucleotide Acid\n", "d) Double Nucleic Acid\n"], "Answer": "a", "Explanation": "DNA stands for Deoxyribonucleic Acid."},
+    {"Topic": "biology", "Question": "An animal that is not eaten by any other animals on a food web is known as what?", "Options": ["a) Primary consumer\n", "b) Detritivore\n", "c) Apex predator\n", "d) Delta consumer\n"], "Answer": "c", "Explanation": "An animal that is not eaten by any other animals on a food web is known as an Apex predator."},
+    {"Topic": "biology", "Question": "Which is NOT a part of cell theory?", "Options": ["a) All living organisms are composed of cells\n", "b) All cells are from pre-existing cells\n", "c) The cell is the basic unit of life\n", "d) The function of a cell is determined by its size\n"], "Answer": "d", "Explanation": "The function of a cell is determined by its size is NOT a part of cell theory."},
+    {"Topic": "biology", "Question": "Which of the following is an example of mutualism symbiosis?", "Options": ["a) A lion hunting a zebra\n", "b) Bees pollinating flowers\n", "c) A bird flying past a dog\n", "d) tree absorbing sunlight\n"], "Answer": "b", "Explanation": "Bees pollinating flowers is an example of mutualism symbiosis as both the bee and flower are benefited from this symbiosis."},
+    {"Topic": "biology", "Question": "Dinosaurs are most closely related to which group of modern animals?", "Options": ["a) Birds\n", "b) Reptiles\n", "c) Amphibians\n", "d) Mammals\n"], "Answer": "a", "Explanation": "Dinosaurs are most closely related to birds."},
+    {"Topic": "biology", "Question": "Which of the following is a unique characteristic of fungi?", "Options": ["a) They produce their own food through photosynthesis.\n", "b) They have chloroplasts like plants.\n", "c) They decompose organic matter and absorb nutrients.\n", "d) They are all multi-celled organisms.\n"], "Answer": "c", "Explanation": "Fungi decompose organic matter and absorb nutrients."},
+    {"Topic": "biology", "Question": "What is the equivalent of an egg cell in a flower?", "Options": ["a) Pollen grain\n", "b) Seeds\n", "c) Ovule\n", "d) Anther\n"], "Answer": "c", "Explanation": "The equivalent of an egg cell in a flower is the ovule. And a sperm cell is the pollen grain."},
 ]
+
 
 
 
@@ -51,4 +74,3 @@ questions = [
 #         print("Wrong")
 #         time.sleep(1)
 #         os.system('cls' if os.name == 'nt' else 'clear')
-
