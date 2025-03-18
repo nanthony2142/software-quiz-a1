@@ -259,44 +259,41 @@ def chemistry_questions(questions):
     print("Your rank is...")
     time.sleep(3)
     if percentage <= 20:
-        print("Talc!")
+        print("Francium!")
         time.sleep(1.5)
-        print("You crumble under the slightest pressure. A mere touch can wear you down, ")
-        print("and even a fingernail is too much for you. You’re soft, flaky, and honestly,")
-        print("no one’s picking you first for the team. But hey, at least you're useful in baby powder. ")
-        
+        print("You barely exist before breaking down! The most unstable of the alkali metals,")
+        print("you’re radioactive, extremely rare, and decay in seconds.")
+        print("No one can even study you properly before you disappear.")
+
+
     elif percentage <= 40:
-        print("Gypsum!")
+        print("Lithium!")
         time.sleep(1.5)
-        print("You try, but you're still easily scratched, a simple copper coin can still leave a mark on you.")
-        print("At least you're useful in drywall and plaster, holding houses together.")
-        print("Just don’t expect to be the foundation.")
-        
+        print("You’re soft, reactive, and float on water.")
+        print("You might not be the toughest, but you're crucial in batteries, keeping the world’s tech running.")
 
     elif percentage <= 60:
-        print("Apatite!")
+        print("Iron!")
         time.sleep(1.5)
-        print("You’re no pushover, but you’re not indestructible either. Harder than your weaker cousins, ")
-        print("you’re tough enough to resist everyday wear but still won’t last against the real heavyweights.") 
-        print("You help build bones and teeth, so at least you're part of the reason people can actually chew their food.")
-
+        print("You’re strong, magnetic, and essential for life without you, blood wouldn’t carry oxygen.")
+        print("You rust under pressure, but no one can deny you’re a foundation of civilization!")
+        
 
     elif percentage <= 80:
-        print("Quartz!")
+        print("Carbon!")
         time.sleep(1.5)
-        print("Now we’re talking! You’re tough, durable, and versatile. You make up sand, glass, and even tech components.")
-        print("You might not be the hardest, but people rely on you for watches, buildings, and even some beautiful gemstones.")
-        print("You’ve earned your place.")
+        print("You can be soft as graphite or harder than steel as graphene.")
+        print("Shape-shifter, tech innovator, life giver—carbon does it all.")
+        print("You hold life together and make up the hardest known natural material.")
 
 
     else:
-        print("Diamond!")
+        print("Uranium!")
         time.sleep(1.5)
-        print("You’ve been under immense pressure, and instead of breaking, ")
-        print("you became the toughest mineral on Earth.")
-        print("No one scratches you, and you shine bright, whether in industry or in luxury. ")
-        print("You’re the ultimate performer, proving that pressure makes diamonds!")
-
+        print("You’re heavy, unstable, and unstoppable. You pulse with raw nuclear energy, capable of powering cities or unleashing unimaginable destruction.")
+        print("Your radioactive glow is a warning and a promise wherever you go, ")
+        print("change follows. Whether fueling the future or shaping history, you are a force that cannot be ignored.")
+    
     ###
 
     if wrong_answers:
