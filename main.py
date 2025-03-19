@@ -522,8 +522,7 @@ def filter_topic(questions):
         typewriter("\n\n")
         decision = input("What science quiz are you wanting to try? ") 
         typewriter("\n\n")
-
-
+    
     filtered_questions = [question for question in questions if question["Topic"].lower() == decision.lower()]
     
     if decision.lower() == "earth":
@@ -539,10 +538,13 @@ def intro():
     os.system('cls' if os.name == 'nt' else 'clear')
     typewriter("Hello!\n")
     typewriter("Welcome to my series of quizzes!\n")
-    filter_topic(questions)
+    
 
 def main():
-    intro()
+    intro() # plays intro
+    filter_topic(questions) # filters the questions based on the chosen topic
+    
+
 
 def ending():
     os.system('cls' if os.name == 'nt' else 'clear')
