@@ -1,21 +1,3 @@
-import time
-import os
-import random
-
-
-
-#############INTROOOOOOOO########
-#please open the terminal as much as you can etccccccc
-
-
-
-#Hello 
-
-#############INTROOOOOOOO########
-
-
-
-
 questions = [
     {"Topic": "Earth", "Question":"How was the moon created?","Options":["a) Accretion from elements of a once Nebula star\n formed into a moon like structure.\n","b) Dairy factories created a huge sphere of cheese\n and sent it to space.\n","c) A planet the size of Mars hit Earth\n forming a moon structure from Earths rubble.\n","d) A comet from a nearby galaxy got caught\n in Earth's gravitational pull and became the moon.\n"],"Answer": "c","Explanation": "The moon was actually created when a planet the size of Mars hit Earth, forming a moon structure from Earths rubble."},
     {"Topic": "Earth", "Question":"Which of these materials is soil NOT made of?","Options":["a) Clay\n","b) Charcoa\n", "c) Silt\n", "d) Sand\n"],"Answer": "b","Explanation": "Soil is not made of charcoal."},
@@ -64,25 +46,20 @@ questions = [
     {"Topic": "Biology", "Question": "What is the equivalent of an egg cell in a flower?", "Options": ["a) Pollen grain\n", "b) Seeds\n", "c) Ovule\n", "d) Anther\n"], "Answer": "c", "Explanation": "The equivalent of an egg cell in a flower is the ovule. And a sperm cell is the pollen grain."},
 ]
 
-
-
-
-# os.system('cls' if os.name == 'nt' else 'clear')
-
-# chemistry_questions = [question for question in questions if question["Topic"].lower() == "chemistry"]
-# for question in chemistry_questions:
-#     random.shuffle(questions)
-#     print(question["Question"])
-#     print(f"Your options are:")
-#     for option in question["Options"]:
-#         print(option)
-
-#     answer = input("What do you choose? ")
-#     if answer == question["Answer"]:
-#         print("Well done!!!")
-#         time.sleep(1)
-#         os.system('cls' if os.name == 'nt' else 'clear')
-#     else:
-#         print("Wrong")
-#         time.sleep(1)
-#         os.system('cls' if os.name == 'nt' else 'clear')
+ranks = [
+    {"Topic": "Earth", "Rank": "Talc!", "Description": "You crumble under the slightest pressure. A mere touch can wear you down, \n and even a fingernail is too much for you. You’re soft, flaky, and honestly,\n no one’s picking you first for the team. But hey, at least you're useful in baby powder. \n"},
+    {"Topic": "Earth", "Rank": "Gypsum!", "Description": "You try, but you're still easily scratched, a simple copper coin can still leave a mark on you.\n At least you're useful in drywall and plaster, holding houses together.\n Just don’t expect to be the foundation.\n"},
+    {"Topic": "Earth", "Rank": "Apatite!", "Description": "You’re no pushover, but you’re not indestructible either. Harder than your weaker cousins, \n you’re tough enough to resist everyday wear but still won’t last against the real heavyweights.\n You help build bones and teeth, so at least you're part of the reason people can actually chew their food.\n"},
+    {"Topic": "Earth", "Rank": "Quartz!", "Description": "You’re tough, durable, and versatile. You make up sand, glass, and even tech components.\n You might not be the hardest, but people rely on you for watches, buildings, and even some beautiful gemstones.\nYou’ve earned your place.\n"},
+    {"Topic": "Earth", "Rank": "Diamond!", "Description": "You’ve been under immense pressure, and instead of breaking, \n you became the toughest mineral on Earth.\n No one scratches you, and you shine bright, whether in industry or in luxury. \nYou’re the ultimate performer, proving that pressure makes diamonds!\n"},
+    {"Topic": "Chemistry", "Rank": "Francium!", "Description": "You barely exist before breaking down! The most unstable of the alkali metals,\n you’re radioactive, extremely rare, and decay in seconds.\n No one can even study you properly before you disappear.\n"},
+    {"Topic": "Chemistry", "Rank": "Lithium!", "Description": "You’re soft, reactive, and float on water.\nYou might not be the toughest, but you're crucial in batteries, keeping the world’s tech running.\n"},
+    {"Topic": "Chemistry", "Rank": "Iron!", "Description": "You’re strong, magnetic, and essential for life without you, blood wouldn’t carry oxygen.\nYou rust under pressure, but no one can deny you’re a foundation of civilization!\n"},
+    {"Topic": "Chemistry", "Rank": "Carbon!", "Description": "You can be soft as graphite or harder than steel as graphene.\nShape-shifter, tech innovator, life giver—carbon does it all.\nYou hold life together and make up the hardest known natural material.\n"},
+    {"Topic": "Chemistry", "Rank": "Uranium!", "Description": "You’re heavy, unstable, and unstoppable. You pulse with raw nuclear energy, capable of powering cities or unleashing unimaginable destruction.\nYour radioactive glow is a warning and a promise wherever you go, \nchange follows. Whether fueling the future or shaping history, you are a force that cannot be ignored.\n"},
+    {"Topic": "Biology", "Rank": "Mycoplasma!", "Description": "You’re microscopic, fragile, and barely holding it together.\nWith no cell wall, even antibiotics push you around.\nYou survive by leeching off stronger organisms, parasitic and pathetic.\n"},
+    {"Topic": "Biology", "Rank": "Amoeba!", "Description": "You’ve got no backbone, no real structure, and you move by oozing around.\nBut don’t underestimate yourself your adaptability lets you survive in places others can’t.\n"},
+    {"Topic": "Biology", "Rank": "Mushroom!", "Description": "You work in the shadows, breaking down the dead and recycling life itself.\nYour roots spread like an underground network, influencing entire ecosystems.\nPeople might not always notice you, but without you, nature falls apart.\n"},
+    {"Topic": "Biology", "Rank": "Redwood Tree!", "Description": "You don’t need to move when you’re this big.\nTowering over the competition, you’ve stood strong for centuries, unshaken by storms, fires, or time.\nYou breathe life into the world, and even when you fall, you shape ecosystems for generations.\n"},
+    {"Topic": "Biology", "Rank": "Orca!", "Description": "You dominate the ocean with intelligence, teamwork, and raw power.\nNo natural predators, no real threats you decide who lives and who dies.\nWhether hunting in packs or outsmarting your prey, you rule your domain like no other.\nYou are the king of the sea.\n"},
+]
