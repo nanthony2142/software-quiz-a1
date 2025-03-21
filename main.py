@@ -9,11 +9,6 @@ import random
 
 from earth import questions
 
-score = 0
-question_number = 0
-question_amount = 0
-number = 0
-wrong_answers = []
 
 
 def typewriter(words): # allows type writting effect
@@ -22,12 +17,8 @@ def typewriter(words): # allows type writting effect
         sys.stdout.write(char)
         sys.stdout.flush()
 
-def earth_questions(questions):
-    global score
-    global question_number
-    global question_amount
-    global number
-    global wrong_answers
+def earth_questions(questions, score, question_number, question_amount, number, wrong_answers):
+    
 
     os.system('cls' if os.name == 'nt' else 'clear')
     random.shuffle(questions)
@@ -182,13 +173,10 @@ def earth_questions(questions):
 
         if decision.lower() == "exit":
             ending()
+    return score, question_number, question_amount, number, wrong_answers
 
-def chemistry_questions(questions):
-    global score
-    global question_number
-    global question_amount
-    global number
-    global wrong_answers
+def chemistry_questions(questions, score, question_number, question_amount, number, wrong_answers):
+    
 
     os.system('cls' if os.name == 'nt' else 'clear')
     random.shuffle(questions)
@@ -341,13 +329,10 @@ def chemistry_questions(questions):
 
         if decision.lower() == "exit":
             ending()
+    return score, question_number, question_amount, number, wrong_answers
   
-def biology_questions(questions):    
-    global score
-    global question_number
-    global question_amount
-    global number
-    global wrong_answers
+def biology_questions(questions, score, question_number, question_amount, number, wrong_answers):    
+    
 
     os.system('cls' if os.name == 'nt' else 'clear')
     random.shuffle(questions)
@@ -501,7 +486,8 @@ def biology_questions(questions):
 
         if decision.lower() == "exit":
             ending()  
-           
+    return score, question_number, question_amount, number, wrong_answers
+      
 def filter_topic(questions):
     topics = []
     for question in questions:
@@ -525,14 +511,20 @@ def filter_topic(questions):
     
     filtered_questions = [question for question in questions if question["Topic"].lower() == decision.lower()]
     
+    score = 0
+    question_number = 0
+    question_amount = 0
+    number = 0
+    wrong_answers = []
+
     if decision.lower() == "earth":
-        earth_questions(filtered_questions)
+        earth_questions(filtered_questions, score, question_number, question_amount, number, wrong_answers)
         
     elif decision.lower() == "chemistry":
-        chemistry_questions(filtered_questions)
+        chemistry_questions(filtered_questions, score, question_number, question_amount, number, wrong_answers)
 
     elif decision.lower() == "biology":
-        biology_questions(filtered_questions)
+        biology_questions(filtered_questions, score, question_number, question_amount, number, wrong_answers)
 
 def intro():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -542,6 +534,11 @@ def intro():
 
 def main():
     intro() # plays intro
+    score = 0
+    question_number = 0
+    question_amount = 0 
+    number = 0
+    wrong_answers = []
     filter_topic(questions) # filters the questions based on the chosen topic
     
 
