@@ -1,15 +1,10 @@
-# allows time in code
-import time
-# interacts with operating system 
+#Imports
+import time 
 import os
-# commands specific functions
 import sys
-
 import random
-
 from earth import questions
 from earth import ranks
-
 
 def typewriter(words): # allows type writting effect
     for char in words:
@@ -17,10 +12,9 @@ def typewriter(words): # allows type writting effect
         sys.stdout.write(char)
         sys.stdout.flush()
 
-def quiz_questions(filtered_questions, score, question_number, question_amount, number_of_questions, wrong_answers):
-
+def length_quiz_questions(question_amount):
+        
     os.system('cls' if os.name == 'nt' else 'clear')
-    random.shuffle(filtered_questions)
     length_quiz = input("What length of quiz are you wanting to do? Type: | short | medium | long | >> ") # first of all get the input
     while length_quiz.lower() != ("short") and length_quiz.lower() != ("medium") and length_quiz.lower() != ("long"): # check if the input is valid
         typewriter("Invalid choice. Please type a valid length\n\n") # repeat the question with a warning
@@ -32,6 +26,13 @@ def quiz_questions(filtered_questions, score, question_number, question_amount, 
         question_amount = 10
     elif length_quiz.lower() == "long":
         question_amount = 15
+    
+    return question_amount
+
+def quiz_questions(filtered_questions, score, question_number, question_amount, number_of_questions, wrong_answers):
+
+    os.system('cls' if os.name == 'nt' else 'clear')
+    random.shuffle(filtered_questions)
     
     while number_of_questions < question_amount:
         question = filtered_questions[number_of_questions]  # Select the question based on the current number
@@ -87,100 +88,32 @@ def quiz_results(filtered_ranks, score, question_amount, wrong_answers):
                 typewriter("{}\n".format(rank["Rank"]))
                 typewriter(rank["Description"])
                 time.sleep(1.5)
-                print("hi")
+        
+                for wrong in wrong_answers:
+                    typewriter("\nWhat questions did you get wrong?")
+                    print("\n\n")
+                    if wrong_answers:
+                        typewriter(wrong["Question"])
+                        print("\n")
+                        typewriter("Answer: {}\n".format(wrong["Explanation"]))
+                        print("\n\n")
+                time.sleep(2)
+                os.system('cls' if os.name == 'nt' else 'clear')
                 break
-                
-
-    # if percentage <= 20:
-    #     print[(filtered_ranks[0]["Rank"])]
-    #     time.sleep(1.5)
-        
-
-    # elif percentage <= 40:
-    #     typewriter("Gypsum!\n")
-    #     time.sleep(1.5)
-    #     typewriter("You try, but you're still easily scratched, a simple copper coin can still leave a mark on you.\n")
-    #     typewriter("At least you're useful in drywall and plaster, holding houses together.\n")
-    #     typewriter("Just don’t expect to be the foundation.\n")
-        
-
-    # elif percentage <= 60:
-    #     typewriter("Apatite!\n")
-    #     time.sleep(1.5)
-    #     typewriter("You’re no pushover, but you’re not indestructible either. Harder than your weaker cousins, \n")
-    #     typewriter("you’re tough enough to resist everyday wear but still won’t last against the real heavyweights.\n") 
-    #     typewriter("You help build bones and teeth, so at least you're part of the reason people can actually chew their food.\n")
-
-
-    # elif percentage <= 80:
-    #     typewriter("Quartz!\n")
-    #     time.sleep(1.5)
-    #     typewriter("You’re tough, durable, and versatile. You make up sand, glass, and even tech components.\n")
-    #     typewriter("You might not be the hardest, but people rely on you for watches, buildings, and even some beautiful gemstones.\n")
-    #     typewriter("You’ve earned your place.\n")
-
-
-    # else:
-    #     typewriter("Diamond!\n")
-    #     time.sleep(1.5)
-    #     typewriter("You’ve been under immense pressure, and instead of breaking, \n")
-    #     typewriter("you became the toughest mineral on Earth.\n")
-    #     typewriter("No one scratches you, and you shine bright, whether in industry or in luxury. \n")
-    #     typewriter("You’re the ultimate performer, proving that pressure makes diamonds!\n")
-
-
-    # if wrong_answers:
-    #     typewriter("\nYou got the following questions wrong:")
-    #     print("\n")
-    #     for wrong in wrong_answers:
-    #         typewriter(wrong["Question"])
-    #         print("\n")
-    #         typewriter("Answer: {}\n".format(wrong["Explanation"]))
-    # else:
-    #     typewriter("\nYou got all the questions right!")
-
-    # decision = input("Would you like to try the test again? Type: | yes | no | ")
-    # print("\n\n")
-    # while decision.lower() != "yes" and decision.lower() != "no":
-    #     typewriter("Invalid choice. Please type a valid option ")
-    #     print("\n\n")
-    #     decision = input("Would you like to try the test again? Type: | yes | no | ")
-    
-    # if decision.lower() == "yes":
-    #     os.system('cls' if os.name == 'nt' else 'clear')
-    #     chemistry_questions(questions)
-
-    # if decision.lower() == "no":
-    #     decision = input("Would you like to try a different quiz or exit? Type: | quiz | exit | ")  
-    #     print("\n\n")
-    #     while decision.lower() != "quiz" and decision.lower() != "exit":
-    #         typewriter("Invalid choice. Please type a valid option ")
-    #         print("\n\n")
-    #         decision = input("Would you like to try a different quiz or exit? Type: | quiz | exit | ")
-        
-
-    #     if decision.lower() == "quiz":
-    #         decision = input("What science quiz are you wanting to try? Type: | Earth | Chemistry | Biology | ")
-    #         print("\n\n")
-    #         while decision.lower() != "earth" and decision.lower() != "chemistry" and decision.lower() != "biology":
-    #             typewriter("Invalid choice. Please type a valid topic ")
-    #             print("\n\n")
-    #             decision = input("What science quiz are you wanting to try? Type: | earth | chemistry | biology | ")
-            
-    #         if decision.lower() == "earth":
-    #             earth_questions(questions)
-
-    #         elif decision.lower() == "chemistry":
-    #             chemistry_questions(questions)
-            
-    #         elif decision.lower() == "biology":
-    #             biology_questions(questions)
-
-    #     if decision.lower() == "exit":
-    #         ending()
     return filtered_ranks, score, question_amount, wrong_answers
+    
+def may_restart_quiz():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    restart_quiz = input("Would you like to restart the quiz? Type: | yes | no | >> ") # first of all get the input
+    while restart_quiz.lower() != "yes" and restart_quiz.lower() != "no": # check if the input is valid
+        typewriter("Invalid choice. Please type a valid option\n\n") # repeat the question with a warning
+        restart_quiz = input("Would you like to restart the quiz? Type: | yes | no | >> ") 
+
+    if restart_quiz.lower() == "yes":
+        display_topics(questions)
 
 def display_topics(questions):
+    os.system('cls' if os.name == 'nt' else 'clear')
     topics = []
     for question in questions:
         topics.append(question["Topic"])
@@ -209,48 +142,53 @@ def filter_topic(questions, topic_choice):
     filtered_questions = [question for question in questions if question["Topic"].lower() == topic_choice.lower()]
     filtered_ranks = [rank for rank in ranks if rank["Topic"].lower() == topic_choice.lower()]
     return filtered_questions, filtered_ranks
-        
+
+def pre_quiz():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    # informs player to open terminal
+    typewriter("Please open the terminal as much as you can. \n\n")
+    # question
+    start_program = input("Are you ready to begin? Type:| ready | >> ") # first of all get the input
+    # check if the input is valid
+    while start_program.lower() != "ready":
+        # repeat the question with a warning
+        typewriter("Invalid choice. Please type a valid option\n\n")
+        start_program = input("Are you ready to begin? Type:| ready | >> ")
+
 def intro():
     os.system('cls' if os.name == 'nt' else 'clear')
     typewriter("Hello!\n")
     typewriter("Welcome to my series of quizzes!\n")
-    
-
-def main():
-    # variables used in quiz
-    score = 0
-    question_number = 0
-    question_amount = 0 
-    number_of_questions = 0
-    wrong_answers = []
-    percentage = 0
-
-    # main functions used in the program
-    intro() 
-    topic_choice = display_topics(questions)
-    filtered_questions, filtered_ranks = filter_topic(questions, topic_choice)
-    score, question_number, question_amount, number_of_questions, wrong_answers = quiz_questions(filtered_questions, score, question_number, question_amount, number_of_questions, wrong_answers)
-    filtered_ranks, score, question_amount, wrong_answers = quiz_results(filtered_ranks, score, question_amount, wrong_answers)
-    ending()
-
-    
-
 
 def ending():
     os.system('cls' if os.name == 'nt' else 'clear')
-    typewriter("Thank you for doing my series of quizzes. I hope you now have an idea of which science interests you.")
+    typewriter("Thank you for doing my series of quizzes.\nI hope you now have an idea of which science interests you.")
 
-os.system('cls' if os.name == 'nt' else 'clear')
-# informs player to open terminal
-typewriter("Please open the terminal as much as you can. \n\n")
-# question
-start_program = input("Are you ready to begin? Type:| ready | >> ") # first of all get the input
-# check if the input is valid
-while start_program.lower() != "ready":
-    # repeat the question with a warning
-    typewriter("Invalid choice. Please type a valid option\n\n")
-    start_program = input("Are you ready to begin? Type:| ready | >> ") 
+def main():
+    # main functions used in the program
+    pre_quiz()
+    intro()
+    while True:
+        # variables used in quiz
+        score = 0
+        question_number = 0
+        question_amount = 0 
+        number_of_questions = 0
+        wrong_answers = []
 
-# if read said
-if start_program.lower() == "ready":
-    main()
+        topic_choice = display_topics(questions)
+        filtered_questions, filtered_ranks = filter_topic(questions, topic_choice)
+        question_amount = length_quiz_questions(question_amount)
+        score, question_number, question_amount, number_of_questions, wrong_answers = quiz_questions(filtered_questions, score, question_number, question_amount, number_of_questions, wrong_answers)
+        filtered_ranks, score, question_amount, wrong_answers = quiz_results(filtered_ranks, score, question_amount, wrong_answers)
+
+        restart_quiz = input("Would you like to restart the quiz or do a different one? Type: | yes | no | >> ")
+        while restart_quiz.lower() != "yes" and restart_quiz.lower() != "no":
+            typewriter("Invalid choice. Please type a valid option\n\n")
+            restart_quiz = input("Would you like to restart the quiz or do a different one? Type: | yes | no | >> ")
+
+        if restart_quiz.lower() == "no":
+            break  # Exit the loop to end the program
+    ending()
+
+main()
