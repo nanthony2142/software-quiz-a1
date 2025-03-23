@@ -3,8 +3,8 @@ import time
 import os
 import sys
 import random
-from earth import questions
-from earth import ranks
+from quiz_questions_ranks import questions
+from quiz_questions_ranks import ranks
 
 def typewriter(words): # allows type writting effect
     for char in words:
@@ -159,6 +159,7 @@ def intro():
     os.system('cls' if os.name == 'nt' else 'clear')
     typewriter("Hello!\n")
     typewriter("Welcome to my series of quizzes!\n")
+    time.sleep(1.5)
 
 def ending():
     os.system('cls' if os.name == 'nt' else 'clear')
