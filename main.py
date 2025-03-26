@@ -34,6 +34,9 @@ def quiz_questions(filtered_questions, score, question_number, question_amount, 
     os.system('cls' if os.name == 'nt' else 'clear')
     random.shuffle(filtered_questions)
     
+    typewriter("To answer the questions, type the letter of the option you think is correct.\n\n")
+    time.sleep(1.5)
+    os.system('cls' if os.name == 'nt' else 'clear')
     while number_of_questions < question_amount:
         question = filtered_questions[number_of_questions]  # Select the question based on the current number
         typewriter(question["Question"])
