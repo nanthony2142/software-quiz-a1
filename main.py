@@ -92,15 +92,16 @@ def quiz_results(filtered_ranks, score, question_amount, wrong_answers):
                 typewriter(rank["Description"])
                 time.sleep(1.5)
         
+                typewriter("\nWhat questions did you get wrong?\n\n")
                 for wrong in wrong_answers:
-                    typewriter("\nWhat questions did you get wrong?")
                     print("\n\n")
                     if wrong_answers:
+                        typewriter("Question: ")
                         typewriter(wrong["Question"])
                         print("\n")
                         typewriter("Answer: {}\n".format(wrong["Explanation"]))
                         print("\n\n")
-                time.sleep(2)
+                time.sleep(3)
                 os.system('cls' if os.name == 'nt' else 'clear')
                 break
     return filtered_ranks, score, question_amount, wrong_answers
@@ -162,11 +163,17 @@ def intro():
     os.system('cls' if os.name == 'nt' else 'clear')
     typewriter("Hello!\n")
     typewriter("Welcome to my series of quizzes!\n")
-    time.sleep(1.5)
+    typewriter("This program will help you find out what sciences you're interested in\n")
+    typewriter("and have aptitude for.\n")
+    typewriter("You will be asked a series of questions and based on your answers,\n")
+    typewriter("you will be given a rank.\n")
+    time.sleep(3)
 
 def ending():
     os.system('cls' if os.name == 'nt' else 'clear')
-    typewriter("Thank you for doing my series of quizzes.\nI hope you now have an idea of which science interests you.")
+    typewriter("Thank you for doing my series of quizzes.\nI hope you now have an idea of which science interests you\n and which science you have an aptitude for.\n")
+    time.sleep(1.5)
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def main():
     # main functions used in the program
