@@ -1,4 +1,4 @@
-       ![Logo](https://github.com/nanthony2142/software-quiz-a1/blob/master/logo2.png)
+![Logo](https://github.com/nanthony2142/software-quiz-a1/blob/master/logo2.png)
 
 # 🔬 Science Quizzes
 ### 📖 Overview
