@@ -1,3 +1,5 @@
+![Logo](https://github.com/nanthony2142/software-quiz-a1/blob/master/logo.png)
+
 # 🔬 Science Quizzes
 ### 📖 Overview
 Science Quizzes is a Python-based program that aims to help students entering Year 11 assess their interest and aptitude in science based subjects. These include Biology, Chemistry, and Earth Science. By answering a series of randomised questions, users can evaluate their knowledge and enthusiasm for these subjects.
